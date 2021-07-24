@@ -10,4 +10,12 @@ router
     .route('/create')
     .post(customerController.createCustomer);
 
+router
+    .route('/get/:id')
+    .get(customerController.getCustomerById);
+
+router
+    .route('/update/:id')
+    .patch(customerController.updateCustomer);
+
 module.exports = router;
